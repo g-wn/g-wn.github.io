@@ -1,0 +1,21 @@
+---
+import { PROJECTS } from '../../config';
+import Project from './Project.astro';
+---
+
+<section
+  id='projects'
+  class='section projects__container'
+>
+  <h2 class='section__title'>Projects</h2>
+
+  <div class='projects'>
+    {PROJECTS.map(project => <Project project={project} />)}
+  </div>
+</section>
+
+<style>
+  .projects {
+    display: flex;
+  }
+</style>

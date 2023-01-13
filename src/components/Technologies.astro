@@ -1,0 +1,71 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<section
+  id='technologies'
+  class='section technologies_container'
+>
+  <h2 class='section__title'>Technologies</h2>
+  <div class='center technologies__body'>
+    {
+      [
+        [<Icon name='simple-icons:javascript' />, 'JavaScript', 'https://developer.mozilla.org/en-US/'],
+        [<Icon name='simple-icons:python' />, 'Python', 'https://www.python.org/'],
+        [<Icon name='simple-icons:nodejs' />, 'Node.js', 'https://nodejs.org/en/docs/'],
+        [<Icon name='simple-icons:sequelize' />, 'Sequelize', 'https://sequelize.org/'],
+        [<Icon name='simple-icons:express' />, 'Express', 'https://expressjs.com/'],
+        [<Icon name='simple-icons:flask' />, 'Flask', 'https://flask.palletsprojects.com/en/2.2.x/'],
+        [<Icon name='simple-icons:react' />, 'React.js', 'https://beta.reactjs.org/'],
+        [<Icon name='simple-icons:redux' />, 'Redux', 'https://redux.js.org/'],
+        [<Icon name='simple-icons:postgresql' />, 'PostgreSQL', 'https://www.postgresql.org/docs/'],
+        [<Icon name='simple-icons:sqlite' />, 'SQLite3', 'https://www.sqlite.org/docs.html'],
+        [<Icon name='simple-icons:html5' />, 'HTML', 'https://developer.mozilla.org/en-US/docs/Web/HTML'],
+        [<Icon name='simple-icons:css3' />, 'CSS', 'https://developer.mozilla.org/en-US/docs/Web/CSS'],
+        [<Icon name='simple-icons:amazonaws' />, 'AWS', 'https://docs.aws.amazon.com/'],
+        [<Icon name='simple-icons:socketdotio' />, 'Socket.IO', 'https://socket.io/docs/v4/'],
+        [<Icon name='simple-icons:heroku' />, 'Heroku', 'https://devcenter.heroku.com/categories/reference'],
+        [<Icon name='simple-icons:docker' />, 'Docker', 'https://docs.docker.com/'],
+        [<Icon name='simple-icons:adobeillustrator' />, 'Illustrator', 'https://www.adobe.com/products/illustrator.html'],
+        [<Icon name='simple-icons:adobeindesign' />, 'InDesign', 'https://www.adobe.com/products/indesign.html'],
+        [<Icon name='simple-icons:rhinoceros' />, 'Rhino3D', 'https://www.rhino3d.com/7/new/#documentation'],
+        [<Icon name='simple-icons:sketchup' />, 'SketchUp', 'https://www.sketchup.com/']
+      ].map(t => (
+        <a
+          href={t[2]}
+          target='_blank'
+          rel='noreferrer'
+          class='single__technology'
+        >
+          <span class='single__tech__icon'>{t[0]}</span>
+          <span class='single__tech__name link'>{t[1]}</span>
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<style lang="css">
+  .technologies__body {
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .single__technology {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 0.25em;
+    justify-content: center;
+    transition: color 0.167s ease;
+  }
+
+  .single__technology:hover {
+    color: var(--color-text-hover);
+  }
+
+  .single__tech__icon {
+    width: 25px;
+  }
+</style>

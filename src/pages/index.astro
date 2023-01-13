@@ -1,0 +1,49 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Nav from '../components/Nav/Nav.astro';
+import Intro from '../components/Intro.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects/Projects.astro';
+import Technologies from '../components/Technologies.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import '@fontsource/source-sans-pro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <BaseHead
+      title={SITE_TITLE}
+      description={SITE_DESCRIPTION}
+    />
+  </head>
+
+  <body class='app'>
+    <main>
+      <Nav />
+      <Intro />
+      <About />
+      <Projects />
+      <Technologies />
+      <Contact />
+    </main>
+    <Footer />
+
+    <style lang='css'>
+      .app {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: "Source Sans Pro", sans-serif;
+        line-height: 1.5;
+      }
+
+      main {
+        margin: 0 auto;
+        max-width: 1120px;
+        width: 95%;
+      }
+    </style>
+  </body>
+</html>

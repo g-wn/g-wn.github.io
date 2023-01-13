@@ -1,0 +1,72 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<section class='section intro__container'>
+  <h1>Hi! I'm Gray Nance.</h1>
+  <h3>Software Engineer.</h3>
+  <div class='intro__links'>
+    <a
+      aria-label='Gray Nance Resume'
+      class='link about__link'
+      href='/Nance_Gray_Resume.pdf'
+      rel='noreferrer'
+      target='_blank'
+    >
+      <Icon name='mdi:resume' />
+    </a>
+    <a
+      aria-label='Gray Nance LinkedIn'
+      class='link about__link'
+      href='https://www.linkedin.com/in/gray-nance/'
+      rel='noreferrer'
+      target='_blank'
+    >
+      <Icon name='simple-icons:linkedin' />
+    </a>
+    <a
+      aria-label='Gray Nance GitHub'
+      class='link about__link'
+      href='https://github.com/g-wn'
+      rel='noreferrer'
+      target='_blank'
+    >
+      <Icon name='simple-icons:github' />
+    </a>
+    <a
+      aria-label='Gray Nance AngelList / Wellfound'
+      class='link about__link'
+      href='https://angel.co/u/gray-nance'
+      rel='noreferrer'
+      target='_blank'
+    >
+      <Icon name='simple-icons:angellist' />
+    </a>
+  </div>
+</section>
+
+<style lang='css'>
+  .about__link {
+    width: 25px;
+  }
+
+  .intro__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 80vh;
+    justify-content: center;
+    margin-top: -2em;
+  }
+
+  .intro__links {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+    max-width: 500px;
+    text-align: center;
+  }
+</style>

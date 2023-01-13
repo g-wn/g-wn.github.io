@@ -1,0 +1,15 @@
+---
+const { project } = Astro.props;
+---
+
+<div class="project-container">
+  <h3>{project.name}</h3>
+  <p>{project.description}</p>
+</div>
+
+
+<style>
+    .project-container {
+        box-shadow: var(--shadow);
+    }
+</style>
