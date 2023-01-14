@@ -29,7 +29,7 @@ export const PROJECTS = [
     ],
     githubLink: 'https://github.com/g-wn/rungs',
     liveLink: 'https://rungs.herokuapp.com',
-    photo: 'https://cdn.discordapp.com/attachments/1021558885598900225/1063227056663568455/rungs.jpg'
+    photo: 'http://rungs-img-upload.s3.amazonaws.com/257c1571a41446349fc63cc88222a53a.png'
   },
   {
     name: 'Reduncrate',
@@ -52,7 +52,7 @@ export const PROJECTS = [
     ],
     githubLink: 'https://github.com/g-wn/uncrate-clone',
     liveLink: 'https://reduncrate.herokuapp.com/',
-    photo: 'https://cdn.discordapp.com/attachments/1021558885598900225/1063227358204670033/reduncrate.jpg'
+    photo: 'http://rungs-img-upload.s3.amazonaws.com/300db32a175948e8ae0e982b0aee97e5.png'
   },
   {
     name: 'NoCleaningFees',
@@ -65,6 +65,6 @@ export const PROJECTS = [
     technologies: ['React/Redux', 'JavaScript', 'Node', 'Express', 'Sequelize', 'PostgreSQL', 'SQLite3', 'HTML', 'CSS'],
     githubLink: 'https://github.com/g-wn/no-cleaning-fees',
     liveLink: 'https://nocleaningfees.herokuapp.com/',
-    photo: 'https://cdn.discordapp.com/attachments/1021558885598900225/1063227463787884604/nocleaningfees.jpg'
+    photo: 'http://rungs-img-upload.s3.amazonaws.com/2e0588b1d13d4b6da32460456e0e0885.png'
   }
 ];
