@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon';
+const { destination } = Astro.props;
+---
+
+<div class='down__container'>
+  <a
+    href={`#${destination}`}
+    class='link'
+    >
+    <div>{destination}</div>
+    <div><Icon name='ic:outline-arrow-downward' /></div>
+    </a
+  >
+</div>
+
+<style lang="css">
+  [astro-icon] {
+    width: 40px;
+  }
+
+  .down__container > a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

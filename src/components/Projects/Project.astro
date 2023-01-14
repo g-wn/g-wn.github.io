@@ -1,15 +1,94 @@
 ---
+import { Icon } from 'astro-icon';
 const { project } = Astro.props;
 ---
 
-<div class="project-container">
-  <h3>{project.name}</h3>
-  <p>{project.description}</p>
+<div class='project__container'>
+  <>
+    <div class='project__brief'>
+      <h3>
+        <a
+          class='link'
+          href={project.liveLink}
+          rel='noreferrer'
+          target='_blank'
+          >{project.name}</a
+        >
+      </h3>
+
+      <p>{project.description}</p>
+
+      <ul>
+        {project.technologies.map(tech => <li>{tech}</li>)}
+      </ul>
+
+      <div class='project__links'>
+        <a
+          class='link'
+          href={project.githubLink}
+          rel='noreferrer'
+          target='_blank'
+        >
+          <Icon name='simple-icons:github' />
+        </a>
+        <a
+          class='link'
+          href={project.liveLink}
+          rel='noreferrer'
+          target='_blank'
+        >
+          <Icon name='ic:baseline-launch' />
+        </a>
+      </div>
+    </div>
+    <!-- <div class='project__image'>image</div> -->
+  </>
 </div>
 
-
 <style>
-    .project-container {
-        box-shadow: var(--shadow);
+    [astro-icon] {
+      height: 100%;
     }
+
+  .project__brief,
+  .project__image,
+  .project__details {
+    align-items: center;
+    border-radius: 0.2em;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+  }
+
+  .project__brief > p {
+    margin: 1em auto;
+    white-space: pre-wrap;
+  }
+
+  .project__brief > ul {
+    display: grid;
+    font-size: 0.85em;
+    grid-template-columns: repeat(3, auto);
+    width: 100%;
+  }
+
+  .project__container {
+    display: flex;
+    gap: 1.5em;
+    height: 320px;
+    position: relative;
+    text-align: center;
+    transition: scale 0.167s ease-in-out;
+  }
+
+  .project__container:hover {
+    scale: 1.05;
+  }
+
+  .project__links {
+    bottom: 1em;
+    height: 25px;
+    position: absolute;
+  }
 </style>

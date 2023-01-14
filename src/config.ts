@@ -7,7 +7,7 @@ export const PROJECTS = [
   {
     name: 'Rungs',
     description:
-      'Professional networking web application to connect with colleagues, classmates, and friends. Clone of LinkedIn',
+      'Professional networking web application to connect with colleagues, classmates, and friends. \n Clone of LinkedIn.',
     experiences: [
       'Utilized Agile Workflow methodologies to successfully deliver ahead of the deadline with 30% more completed features than required.',
       'Incorporated AWS S3 across the application to efficiently upload and serve images to/from cloud storage, reduce server load, and improve application scalability.',
@@ -21,6 +21,7 @@ export const PROJECTS = [
       'SQLAlchemy',
       'PostgreSQL',
       'AWS S3',
+      'Socket.IO',
       'Docker',
       'SQLite3',
       'HTML',
@@ -33,7 +34,7 @@ export const PROJECTS = [
   {
     name: 'Reduncrate',
     description:
-      'Curated e-commerce web application allowing users to browse, search, filter, and "purchase" items. Clone of Uncrate',
+      'Curated e-commerce web application allowing users to browse, search, filter, and "purchase" items. \n Clone of Uncrate.',
     experiences: [
       'Coordinated backend development by spearheading API route design to be used in the development of the entire app, allowing smooth integration by utilizing RESTful conventions.',
       'Engineered dynamic and reusable data entry forms by effectively utilizing React State, allowing easy, clear, and efficient recycling of code to appropriately follow DRY coding principles.'
@@ -56,7 +57,7 @@ export const PROJECTS = [
   {
     name: 'NoCleaningFees',
     description:
-      'Vacation booking web application allowing users to browse, search, filter, and "book" spots. Clone of Airbnb',
+      'Vacation booking web application allowing users to browse, search, filter, and "book" spots. \n Clone of Airbnb.',
     experiences: [
       'Leveraged React Context to enable dynamic modal display throughout the entire site, allowing a significantly improved and intuitive user experience.',
       'Ensured user privacy through robust validation with React Router and using Bcrypt salting/hashing, protecting user passwords, and guarding against unauthorized changes to a user’s profile or any other restricted data.'

@@ -1,3 +1,6 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+---
 <nav id="nav" class="nav nav__container">
     <a href="https://www.linkedin.com/in/gray-nance/" target="_blank" rel="noreferrer" class="section__title link">gn.</a>
     <div class="nav__btns">
@@ -5,17 +8,31 @@
         <a href="#projects" class="nav__link link">Projects</a>
         <a href="#technologies" class="nav__link link">Technologies</a>
         <a href="#contact" class="nav__link link">Contact</a>
+        <ThemeToggle />
     </div>
 </nav>
 
 <style>
     .nav__container {
+        align-items: center;
         display: flex;
         justify-content: space-between;
     }
 
+    .nav__container > a {
+        align-content: center;
+        display: flex;
+        font-size: 2.25em;
+        font-weight: 700;
+    }
+
+    .nav__btns {
+        display: flex;
+        margin-bottom: 4em;
+    }
+
     .nav__link {
-        text-transform: uppercase;
+        text-transform: lowercase;
         margin: 0 0.25em;
     }
 </style>

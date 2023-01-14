@@ -1,5 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
+import Up from './PageNav/Up.astro';
+import Down from './PageNav/Down.astro';
 ---
 
 <section
@@ -26,7 +28,11 @@ import { Icon } from 'astro-icon';
         [<Icon name='simple-icons:socketdotio' />, 'Socket.IO', 'https://socket.io/docs/v4/'],
         [<Icon name='simple-icons:heroku' />, 'Heroku', 'https://devcenter.heroku.com/categories/reference'],
         [<Icon name='simple-icons:docker' />, 'Docker', 'https://docs.docker.com/'],
-        [<Icon name='simple-icons:adobeillustrator' />, 'Illustrator', 'https://www.adobe.com/products/illustrator.html'],
+        [
+          <Icon name='simple-icons:adobeillustrator' />,
+          'Illustrator',
+          'https://www.adobe.com/products/illustrator.html'
+        ],
         [<Icon name='simple-icons:adobeindesign' />, 'InDesign', 'https://www.adobe.com/products/indesign.html'],
         [<Icon name='simple-icons:rhinoceros' />, 'Rhino3D', 'https://www.rhino3d.com/7/new/#documentation'],
         [<Icon name='simple-icons:sketchup' />, 'SketchUp', 'https://www.sketchup.com/']
@@ -43,9 +49,11 @@ import { Icon } from 'astro-icon';
       ))
     }
   </div>
+  <Up destination='projects' />
+  <Down destination='contact' />
 </section>
 
-<style lang="css">
+<style lang='css'>
   .technologies__body {
     display: grid;
     gap: 3em;
