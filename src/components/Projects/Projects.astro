@@ -12,7 +12,17 @@ import Down from '../PageNav/Down.astro';
   <h2 class='section__title'>Projects</h2>
 
   <div class='projects'>
-    {PROJECTS.map(project => <Project project={project} />)}
+    {
+      PROJECTS.map((project, idx) => (
+        <div
+          id={`project__${idx + 1}`}
+          tabindex='0'
+          class='project'
+        >
+          <Project project={project} />
+        </div>
+      ))
+    }
   </div>
   <Up destination='about' />
   <Down destination='technologies' />
@@ -20,9 +30,20 @@ import Down from '../PageNav/Down.astro';
 
 <style>
   .projects {
-    display: grid;
+    display: flex;
     gap: 2em;
-    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
+  }
+
+  @media screen and (max-width: 1179px) {
+    .projects {
+      gap: 1em;
+    }
+  }
+
+  @media screen and (max-height: 900px) {
+    .projects {
+      flex-direction: row;
+    }
   }
 </style>

@@ -3,12 +3,26 @@ const today = new Date();
 ---
 
 <footer>
-	{today.getFullYear()} Created by Gray Nance
+  <a
+    href='https://www.linkedin.com/in/gray-nance/'
+    target='_blank'
+    rel='noreferrer'
+    class='footer__content link'
+  >
+    {today.getFullYear()} Created by Gray Nance
+  </a>
 </footer>
+
 <style>
-	footer {
-		margin: 0 auto;
-		padding: 25px;
-		text-align: center;
-	}
+  footer {
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .footer__content {
+    cursor: pointer;
+    margin: 0 auto;
+    width: fit-content;
+  }
 </style>

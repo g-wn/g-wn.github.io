@@ -62,18 +62,28 @@ import Down from './PageNav/Down.astro';
 
   .single__technology {
     align-items: center;
+    box-shadow: var(--shadow);
     cursor: pointer;
     display: flex;
-    gap: 0.25em;
+    gap: 0.5em;
     justify-content: center;
-    transition: color 0.167s ease;
+    padding: 1em 0.75em;
+    transition: color 0.167s ease, scale 0.5s ease;
   }
 
   .single__technology:hover {
     color: var(--color-text-hover);
+    scale: 1.05;
   }
 
   .single__tech__icon {
+    display: flex;
     width: 25px;
+  }
+
+  @media screen and (max-height: 900px) {
+    .technologies__body {
+      gap: 1.5em;
+    }
   }
 </style>

@@ -44,12 +44,18 @@ import Down from './PageNav/Down.astro';
       <Icon name='simple-icons:angellist' />
     </a>
   </div>
-  <Down destination='about'/>
+  <div class='down__container'>
+    <Down destination='about' />
+  </div>
 </section>
 
 <style lang='css'>
   .about__link {
     width: 25px;
+  }
+
+  .down__container {
+    margin-bottom: 1em;
   }
 
   .intro__container {
