@@ -1,3 +1,8 @@
+---
+import Up from "./PageNav/Up.astro";
+import Down from "./PageNav/Down.astro";
+---
+
 <section
   id='about'
   class='section about__container'
@@ -29,6 +34,8 @@
       src='https://cdn.discordapp.com/attachments/1021558885598900225/1063249118446759966/Nance_Gray_Profile_Img.jpg'
     />
   </div>
+  <Up destination='top'/>
+  <Down destination='projects'/>
 </section>
 
 <style>

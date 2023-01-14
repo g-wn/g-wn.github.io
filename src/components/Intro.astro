@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
+import Down from './PageNav/Down.astro';
 ---
 
 <section class='section intro__container'>
@@ -43,6 +44,7 @@ import { Icon } from 'astro-icon';
       <Icon name='simple-icons:angellist' />
     </a>
   </div>
+  <Down destination='about'/>
 </section>
 
 <style lang='css'>
@@ -55,7 +57,7 @@ import { Icon } from 'astro-icon';
     display: flex;
     flex-direction: column;
     gap: 1em;
-    height: 80vh;
+    height: 90.5vh;
     justify-content: center;
     margin-top: -2em;
   }
@@ -67,6 +69,7 @@ import { Icon } from 'astro-icon';
     justify-content: center;
     margin-top: 1em;
     max-width: 500px;
+    position: relative;
     text-align: center;
   }
 </style>

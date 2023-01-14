@@ -1,6 +1,8 @@
 ---
 import { PROJECTS } from '../../config';
 import Project from './Project.astro';
+import Up from '../PageNav/Up.astro';
+import Down from '../PageNav/Down.astro';
 ---
 
 <section
@@ -12,10 +14,15 @@ import Project from './Project.astro';
   <div class='projects'>
     {PROJECTS.map(project => <Project project={project} />)}
   </div>
+  <Up destination='about' />
+  <Down destination='technologies' />
 </section>
 
 <style>
   .projects {
-    display: flex;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
   }
 </style>

@@ -1,3 +1,39 @@
-<section id="contact" class="section contact__container">
-    <h2 class="section__title">Reach Out</h2>
+---
+import { Icon } from 'astro-icon';
+import Up from './PageNav/Up.astro';
+---
+
+<section
+  id='contact'
+  class='section contact__container'
+>
+  <h2 class='section__title'>Reach Out</h2>
+  <Up destination='technologies' />
+
+  <div class='down__container'>
+  <a
+    href='#top'
+    class='link'
+    >
+    <div><Icon name='ic:outline-arrow-upward' /></div>
+    <div>top</div>
+    </a
+  >
+</div>
 </section>
+
+<style lang='css'>
+  [astro-icon] {
+    width: 40px;
+  }
+
+  .contact__container {
+    height: 94.4vh;
+  }
+
+  .down__container > a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
