@@ -7,19 +7,33 @@ import Up from './PageNav/Up.astro';
   id='contact'
   class='section contact__container'
 >
-  <h2 class='section__title'>Reach Out</h2>
-  <Up destination='technologies' />
-
-  <div class='down__container'>
-  <a
-    href='#top'
-    class='link'
-    >
-    <div><Icon name='ic:outline-arrow-upward' /></div>
-    <div>top</div>
-    </a
+  <form
+    class='contact__form'
+    action='mailto: graynance@gmail.com'
   >
-</div>
+    <h2 class='section__title'>Reach Out</h2>
+    <p class='contact__body'>
+      I'm excited to bring my experience to any new projects or opportunities, so please feel free to reach out. I would
+      love any chance to connect, and my inbox is always open. I'm looking forward to hearing from you...
+    </p>
+    <input
+      class='contact__mailto link'
+      type='submit'
+      value='Say Hi!'
+    />
+  </form>
+
+  <Up destination='technologies' />
+  <!-- CUSTOM TOP NAVIGATOR -->
+  <div class='down__container'>
+    <a
+      href='#top'
+      class='link'
+    >
+      <div><Icon name='ic:outline-arrow-upward' /></div>
+      <div class="top__nav__text">top</div>
+    </a>
+  </div>
 </section>
 
 <style lang='css'>
@@ -27,13 +41,40 @@ import Up from './PageNav/Up.astro';
     width: 40px;
   }
 
+  .contact__body {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+  }
+
   .contact__container {
     height: 94.4vh;
+  }
+
+  .contact__form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact__mailto {
+    background-color: var(--color-bg);
+    border: 1px solid;
+    border-radius: 0.1em;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 3em;
+    padding: 0.5em 1em;
   }
 
   .down__container > a {
     align-items: center;
     display: flex;
     flex-direction: column;
+  }
+
+  .top__nav__text {
+    margin-bottom: 0.5em;
   }
 </style>
