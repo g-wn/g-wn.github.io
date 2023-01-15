@@ -98,13 +98,9 @@ li {
 }
 
 .section__title {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	text-align: center;
 	text-transform: uppercase;
-}
-
-.nav {
-	margin-top: 2em;
 }
 
 .link {
@@ -155,8 +151,13 @@ li {
 	width: 100%;
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1024px) {
 	.section__title {
-		margin-bottom: 0.25em;
+		/* margin-bottom: 1em; */
+	}
+
+	.section {
+		min-height: 90vh;
+		height: fit-content;
 	}
 }
