@@ -37,13 +37,13 @@ import Down from '../PageNav/Down.astro';
 
   @media screen and (max-width: 1179px) {
     .projects {
+      flex-direction: column;
       gap: 1em;
     }
-  }
 
-  @media screen and (max-height: 900px) {
-    .projects {
-      flex-direction: row;
+    .projects__container {
+      height: fit-content;
+      min-height: 200vh;
     }
   }
 </style>
