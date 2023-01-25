@@ -16,8 +16,17 @@ import Up from './PageNav/Up.astro';
       I'm excited to bring my experience to any new projects or opportunities, so please feel free to reach out. I would
       love any chance to connect, and my inbox is always open. I'm looking forward to hearing from you...
     </p>
+    <a
+      aria-label='Gray Nance Resume'
+      class='contact__resume'
+      href='/Nance_Gray_Resume.pdf'
+      rel='noreferrer'
+      target='_blank'
+    >
+      Resume
+    </a>
     <input
-      class='contact__mailto link'
+      class='contact__mailto'
       type='submit'
       value='Say Hi!'
     />
@@ -31,7 +40,7 @@ import Up from './PageNav/Up.astro';
       class='link'
     >
       <div><Icon name='ic:outline-arrow-upward' /></div>
-      <div class="top__nav__text">top</div>
+      <div class='top__nav__text'>top</div>
     </a>
   </div>
 </section>
@@ -57,7 +66,8 @@ import Up from './PageNav/Up.astro';
     flex-direction: column;
   }
 
-  .contact__mailto {
+  .contact__mailto,
+  .contact__resume {
     background-color: var(--color-bg);
     border: 1px solid;
     border-radius: 0.1em;
@@ -66,6 +76,20 @@ import Up from './PageNav/Up.astro';
     font-size: 1.5em;
     margin-top: 3em;
     padding: 0.5em 1em;
+    transition: color 0.167s ease;
+  }
+
+  .contact__resume {
+    align-items: center;
+    display: flex;
+    height: 63px;
+    justify-content: center;
+    width: 133px;
+  }
+
+  .contact__mailto:hover,
+  .contact__resume:hover {
+    color: var(--color-text-hover);
   }
 
   .down__container > a {
