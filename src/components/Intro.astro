@@ -1,53 +1,55 @@
 ---
 import { Icon } from 'astro-icon';
 import Down from './PageNav/Down.astro';
+import Nav from './Nav/Nav.astro';
 ---
 
 <section class='section intro__container'>
-  <h1 class="welcome__wide">Hi! I'm Gray Nance.</h1>
-  <h1 class="welcome__narrow">Gray Nance.</h1>
-  <h3>Software Engineer.</h3>
-  <div class='intro__links'>
-    <a
-      aria-label='Gray Nance Resume'
-      class='link about__link'
-      href='/Nance_Gray_Resume.pdf'
-      rel='noreferrer'
-      target='_blank'
-    >
-      <Icon name='mdi:resume' />
-    </a>
-    <a
-      aria-label='Gray Nance LinkedIn'
-      class='link about__link'
-      href='https://www.linkedin.com/in/gray-nance/'
-      rel='noreferrer'
-      target='_blank'
-    >
-      <Icon name='simple-icons:linkedin' />
-    </a>
-    <a
-      aria-label='Gray Nance GitHub'
-      class='link about__link'
-      href='https://github.com/g-wn'
-      rel='noreferrer'
-      target='_blank'
-    >
-      <Icon name='simple-icons:github' />
-    </a>
-    <a
-      aria-label='Gray Nance AngelList / Wellfound'
-      class='link about__link'
-      href='https://angel.co/u/gray-nance'
-      rel='noreferrer'
-      target='_blank'
-    >
-      <Icon name='simple-icons:angellist' />
-    </a>
+  <Nav />
+  <div class='intro__content__container'>
+    <h1 class='welcome__wide'>Hi! I'm Gray Nance.</h1>
+    <h1 class='welcome__narrow'>Gray Nance.</h1>
+    <h3>Software Engineer.</h3>
+    <div class='intro__links'>
+      <a
+        aria-label='Gray Nance Resume'
+        class='link about__link'
+        href='/Nance_Gray_Resume.pdf'
+        rel='noreferrer'
+        target='_blank'
+      >
+        <Icon name='mdi:resume' />
+      </a>
+      <a
+        aria-label='Gray Nance LinkedIn'
+        class='link about__link'
+        href='https://www.linkedin.com/in/gray-nance/'
+        rel='noreferrer'
+        target='_blank'
+      >
+        <Icon name='simple-icons:linkedin' />
+      </a>
+      <a
+        aria-label='Gray Nance GitHub'
+        class='link about__link'
+        href='https://github.com/g-wn'
+        rel='noreferrer'
+        target='_blank'
+      >
+        <Icon name='simple-icons:github' />
+      </a>
+      <a
+        aria-label='Gray Nance AngelList / Wellfound'
+        class='link about__link'
+        href='https://angel.co/u/gray-nance'
+        rel='noreferrer'
+        target='_blank'
+      >
+        <Icon name='simple-icons:angellist' />
+      </a>
+    </div>
   </div>
-  <div class='down__container'>
-    <Down destination='about' />
-  </div>
+  <Down destination='about' />
 </section>
 
 <style lang='css'>
@@ -55,16 +57,10 @@ import Down from './PageNav/Down.astro';
     width: 25px;
   }
 
-  .down__container {
-    margin-bottom: 1em;
-  }
-
-  .intro__container {
+  .intro__content__container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    height: 90.5vh;
     justify-content: center;
   }
 

@@ -9,22 +9,24 @@ import Down from '../PageNav/Down.astro';
   id='projects'
   class='section projects__container'
 >
-  <h2 class='section__title'>Projects</h2>
-
-  <div class='projects'>
-    {
-      PROJECTS.map((project, idx) => (
-        <div
-          id={`project__${idx + 1}`}
-          tabindex='0'
-          class='project'
-        >
-          <Project project={project} />
-        </div>
-      ))
-    }
-  </div>
   <Up destination='about' />
+
+  <div>
+    <h2 class='section__title'>Projects</h2>
+    <div class='projects'>
+      {
+        PROJECTS.map((project, idx) => (
+          <div
+            id={`project__${idx + 1}`}
+            tabindex='0'
+            class='project'
+          >
+            <Project project={project} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
   <Down destination='technologies' />
 </section>
 
