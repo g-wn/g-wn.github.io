@@ -1,20 +1,21 @@
 ---
-import Up from "./PageNav/Up.astro";
-import Down from "./PageNav/Down.astro";
+import Up from './PageNav/Up.astro';
+import Down from './PageNav/Down.astro';
 ---
 
 <section
   id='about'
   class='section about__container'
 >
+  <Up destination='top' />
   <h2 class='section__title'>About Me</h2>
 
   <div class='center about__body'>
     <div class='bio'>
       <p>
-        I am a Software Engineer based in Los Angeles, CA. I have proven fullstack ability working with some of the most in-demand
-        technologies, like JavaScript, Python, Node.js, React, Express, and Flask, and a passion for bringing them to
-        life in responsive, intuitively designed, and functional applications.
+        I am a Software Engineer based in Los Angeles, CA. I have proven fullstack ability working with some of the most
+        in-demand technologies, like JavaScript, Python, Node.js, React, Express, and Flask, and a passion for bringing
+        them to life in responsive, intuitively designed, and functional applications.
       </p>
       <p>
         I come from a background of 10+ years as a Pastry Chef working in some of the most celebrated restaurants in
@@ -34,8 +35,7 @@ import Down from "./PageNav/Down.astro";
       src='https://cdn.discordapp.com/attachments/1021558885598900225/1063249118446759966/Nance_Gray_Profile_Img.jpg'
     />
   </div>
-  <Up destination='top'/>
-  <Down destination='projects'/>
+  <Down destination='projects' />
 </section>
 
 <style>

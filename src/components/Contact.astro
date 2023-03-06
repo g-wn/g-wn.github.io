@@ -1,12 +1,14 @@
 ---
 import { Icon } from 'astro-icon';
 import Up from './PageNav/Up.astro';
+import Footer from './Footer.astro';
 ---
 
 <section
   id='contact'
   class='section contact__container'
 >
+  <Up destination='technologies' />
   <form
     class='contact__form'
     action='mailto: graynance@gmail.com'
@@ -32,7 +34,6 @@ import Up from './PageNav/Up.astro';
     />
   </form>
 
-  <Up destination='technologies' />
   <!-- CUSTOM TOP NAVIGATOR -->
   <div class='down__container'>
     <a
@@ -42,6 +43,7 @@ import Up from './PageNav/Up.astro';
       <div><Icon name='ic:outline-arrow-upward' /></div>
       <div class='top__nav__text'>top</div>
     </a>
+    <Footer />
   </div>
 </section>
 
@@ -57,7 +59,7 @@ import Up from './PageNav/Up.astro';
   }
 
   .contact__container {
-    height: 91.5vh;
+    /* height: 91.5vh; */
   }
 
   .contact__form {

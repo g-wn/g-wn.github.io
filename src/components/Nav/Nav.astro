@@ -1,52 +1,80 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro";
+import ThemeToggle from './ThemeToggle.astro';
 ---
-<nav id="nav" class="nav nav__container">
-    <a href="https://www.linkedin.com/in/gray-nance/" target="_blank" rel="noreferrer" class="nav__initials link">gn.</a>
-    <div class="nav__btns">
-        <a href="#about" class="nav__link link">About</a>
-        <a href="#projects" class="nav__link link">Projects</a>
-        <a href="#technologies" class="nav__link link">Technologies</a>
-        <a href="#contact" class="nav__link link">Contact</a>
-        <ThemeToggle />
-    </div>
+
+<nav
+  id='nav'
+  class='nav nav__container'
+>
+  <a
+    href='https://www.linkedin.com/in/gray-nance/'
+    target='_blank'
+    rel='noreferrer'
+    class='nav__initials link'
+    >gn.</a
+  >
+  <div class='nav__btns'>
+    <a
+      href='#about'
+      class='nav__link link'
+      >About</a
+    >
+    <a
+      href='#projects'
+      class='nav__link link'
+      >Projects</a
+    >
+    <a
+      href='#technologies'
+      class='nav__link link'
+      >Technologies</a
+    >
+    <a
+      href='#contact'
+      class='nav__link link'
+      >Contact</a
+    >
+    <ThemeToggle />
+  </div>
 </nav>
 
 <style>
-    .nav__container {
-        align-items: center;
-        display: flex;
-        height: 55px;
-        justify-content: space-between;
-        margin-top: 2em;
-    }
+  .nav__container {
+    align-items: center;
+    display: flex;
+    height: 55px;
+    justify-content: space-between;
+    position: relative;
+    top: 2em;
+    z-index: 1;
+  }
 
+  .nav__btns {
+    display: flex;
+  }
+
+  .nav__container > a {
+    align-content: center;
+    display: flex;
+    font-size: 2.25em;
+    font-weight: 700;
+  }
+
+  .nav__initials {
+    text-transform: uppercase;
+  }
+
+  .nav__link {
+    text-transform: lowercase;
+    margin: 0 0.25em;
+  }
+
+  @media screen and (max-width: 429px) {
     .nav__btns {
-        display: flex;
+      flex-direction: column;
+      margin-top: 7em;
+      text-align: right;
+      z-index: 1;
     }
-
-    .nav__container > a {
-        align-content: center;
-        display: flex;
-        font-size: 2.25em;
-        font-weight: 700;
-    }
-
-    .nav__initials {
-        text-transform: uppercase;
-    }
-
-    .nav__link {
-        text-transform: lowercase;
-        margin: 0 0.25em;
-    }
-
-    @media screen and (max-width: 429px) {
-        .nav__btns {
-            flex-direction: column;
-            margin-top: 7em;
-            text-align: right;
-            z-index: 1;
-        }
-    }
+  }
 </style>
